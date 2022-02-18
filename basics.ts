@@ -35,5 +35,13 @@ let people: {
 
 // Type interference
 
-let course = 'React - The Complete Guide'
+let course = "React - The Complete Guide";
 // course =  12345     // won't work
+
+// Union types
+
+let training: string | number = "React + TypeScript";
+training = 200;
+
+let originalName: string | string[] = 'Maximilian';
+originalName = ["Max", 'Sam', 'Bob'];
