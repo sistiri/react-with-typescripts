@@ -20,10 +20,9 @@ hobbies = ["Sports", "Cooking"];
 
 // Type Alias
 type Person = {
-    name: string;
-    age: number;
-  };
-
+  name: string;
+  age: number;
+};
 
 let person: Person;
 
@@ -44,17 +43,30 @@ let course = "React - The Complete Guide";
 let training: string | number = "React + TypeScript";
 training = 200;
 
-let originalName: string | string[] = 'Maximilian';
-originalName = ["Max", 'Sam', 'Bob'];
-
+let originalName: string | string[] = "Maximilian";
+originalName = ["Max", "Sam", "Bob"];
 
 //  Functions & Types
 
-function addNumbers(a: number, b: number ) {
-    return a  + b
+function addNumbers(a: number, b: number) {
+  return a + b;
 }
 
 // function type: void
 function printOutput(value: any) {
-    console.log(value)
+  console.log(value);
 }
+
+// Generics
+
+function insertAtBeginning<T>(array: T[], value: T) {
+  const newArray = [value, ...array];
+  return newArray;
+}
+
+const demoArray = [1, 2, 3];
+
+const updatedArray = insertAtBeginning(demoArray, -1); // [-1, 1, 2, 3]
+const stringArray = insertAtBeginning(['a', 'b', 'c'], 'd')
+
+// updatedArray[0].split("");
