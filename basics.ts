@@ -34,7 +34,7 @@ person = {
 
 let people: Person[];
 
-// Type interference
+// Type inference
 
 let course = "React - The Complete Guide";
 // course =  12345     // won't work
@@ -46,3 +46,15 @@ training = 200;
 
 let originalName: string | string[] = 'Maximilian';
 originalName = ["Max", 'Sam', 'Bob'];
+
+
+//  Functions & Types
+
+function addNumbers(a: number, b: number ) {
+    return a  + b
+}
+
+// function type: void
+function printOutput(value: any) {
+    console.log(value)
+}
