@@ -32,3 +32,8 @@ let people: {
   name: string;
   age: number;
 }[];
+
+// Type interference
+
+let course = 'React - The Complete Guide'
+// course =  12345     // won't work
